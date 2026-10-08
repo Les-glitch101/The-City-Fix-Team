@@ -594,4 +594,8 @@ This document covers Phases 1 & 2 (Planning & Requirements Analysis). The follow
 
 ---
 
-*End of document — Phases 1 & 2 (Planning & Requirements Analysis) baseline, Draft v1.*
+*Note: Section 20 (interview findings + survey) and Section 21 (researcher positioning doc — Crystal Charles / CITY FIX TEAM) added on Day 2 from team documents. Original v1 baseline unchanged; new material appended and cross-referenced.*
+
+---
+
+*End of document — Phases 1 & 2 (Planning & Requirements Analysis) baseline, Draft v1 + Day 2 addendum.*
