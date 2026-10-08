@@ -350,8 +350,8 @@ The gap is not "no reporting channel exists." The gap is: **no consistent intake
 
 ## 11. Phase 1 Deliverable — Signed Team Charter (Draft v1)
 
-**Team:** Project Management (operational accountability partners)
-**Working title:** Pothole Reporting & Road-Maintenance Accountability — Emfuleni pilot
+**Team:** The City Fix Team 
+**Working title:** Pothole Reporting and Repair Tracking System — Emfuleni pilot
 **Mission:** Help Emfuleni (and Vaal Triangle road users/ neighbouring authorities) turn pothole reporting and road-maintenance patching into a managed, trackable, evidence-producing project — starting with a small, credible pilot on the "War on Decay" patching programme (or one ward/ area), bounded in time and geography.
 **What the team is:** Operational accountability partners — PM + systems. We manage the work of fixing roads; the municipality (and its budget/ crews/ procurement) does the actual road work. We make execution visible, prioritised, and accountable.
 **What the team is not:** A road-building contractor; a magic fix for the R636m returned MIG, the unfunded budget for 9 years, or the failed recovery plan; a province-wide road-AI platform on day one.
