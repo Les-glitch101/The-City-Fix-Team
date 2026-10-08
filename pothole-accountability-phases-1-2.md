@@ -376,44 +376,94 @@ The gap is not "no reporting channel exists." The gap is: **no consistent intake
 ## 12. Phase 1 Deliverable — Project Plan v1 (Draft v1)
 
 ### 12.1 Objectives (v1)
-- Build and run a bounded pilot (one programme/ area/ ward, 6–12 weeks) demonstrating intake + reference numbers + work-item management + resident/ operational/ accountability views + SDBIP-relevant indicator operationalisation.
-- Produce the Phase 1 deliverables in this document.
-- Conduct resident/ driver/ ward/ roads-team interviews (question set ready; slots pending).
-- Validate the as-is workflow and prioritisation rules with evidence.
-- Prepare a phase-2 option (scale to more areas/ programmes/ indicators; optional frequent-road-user condition baseline).
+- Produce the Phase 1 deliverables in this document (charter, project plan, risk register, urgent-pothole definition, interview question set, desk research notes, channel inventory, task board).
+- Elicit and document what the system must do from secondary research + driver interviews (11 completed 10/07/2026) + the team positioning doc (Crystal Charles).
+- Design, build, test, deploy, and document a focused prototype across a 4-week timeframe, due **29 October**.
+- Keep scope to the five core features (reporting, duplicate matching, priority classification, staff dashboard, notifications) plus the repair-evidence/ status-tracking extension — scope creep is a named risk.
 
-### 12.2 High-level plan (v1)
+### 12.2 High-level plan — 7 SDLC phases across 4 weeks (due 29 October)
 
-**Week 1 (now — consolidation & kickoff)**
-- Consolidate research + requirements (this document).
-- Finalise team charter, risk register, urgent-pothole definition.
-- Finalise driver/ resident interview question set.
-- Set up live task board.
-- Attempt to confirm interview slots and an entry-point partner (roads team/ ward/ community/ provincial comparison).
+| Week | Phases | Focus |
+|---|---|---|
+| Week 1 | Phase 1 & 2 | Planning & Requirements Analysis |
+| Week 2 | Phase 3 & 4 | System Design & Development (Part 1) |
+| Week 3 | Phase 5 & 6 | Development (Part 2) & Testing |
+| Week 4 | Phase 7 | Deployment & Documentation |
 
-**Week 2–3 (interviews + validation)**
-- Conduct interviews with residents/ drivers/ ward structures/ roads-team contacts.
-- Validate as-is workflow; capture real reporting experiences and response/ non-response.
-- Refine urgent-pothole definition with stakeholder input where possible.
-- Begin lightweight prototype/ wireframe of intake + reference number + status view.
+#### The 7 phases we'll follow
+1. **Planning** — define scope, roles, and schedule.
+2. **Requirements Analysis** — elicit and document what the system must do.
+3. **System Design** — architect the solution (UI, database, APIs).
+4. **Development** — build the system.
+5. **Testing** — verify and validate the system works.
+6. **Deployment** — release and hand over.
+7. **Documentation & Dissertation** — write up research, methodology, results.
 
-**Week 4–6 (build pilot core)**
-- Build: intake + reference number + work-item management + resident status view + operational view + accountability view (scoped to pilot).
-- Low-bandwidth, mobile-first crew capture.
-- Configure prioritisation rules (draft; refine with Thabo/ ward input).
-- Operationalise SDBIP-relevant indicators for pilot.
+**Week 1 (Phase 1 & 2 — Planning & Requirements Analysis)**
+- Consolidate research + requirements into this document (done — Day 1 baseline + Day 2 addendum).
+- Finalise team charter, risk register, urgent-pothole definition, interview question set (done — Section 11/ 13/ 14/ 15).
+- Lock roles and sequence (Section 12.4).
+- Set up the live task board (Section 16 — now active), mapped to the 7 phases.
+- Close the Week 1 deliverables: signed charter; project plan v1 (this section); risk register v1; urgent-pothole definition v1; final interview question set; desk research notes; channel inventory.
+- *Interview status update:* the team has already conducted 11 driver interviews (10/07/2026) and holds a researcher positioning doc (Crystal Charles). Week 1's interview work is therefore partially complete; the record is in Section 20. Remaining interview work: (a) confirm whether a fresh/ additional interview wave is required by the brief; (b) if so, schedule it; (c) if the 11 are sufficient, fold them into the requirements as primary evidence.
 
-**Week 7–12 (run pilot)**
-- Run pilot on defined programme/ area/ ward.
-- Track: logged with reference numbers; % with visible status; logged-to-dispatched time; closure rate; accountability-view producibility.
-- Capture evidence; produce periodic operational/ accountability updates.
-- Document what worked, what didn't, and phase-2 options.
+**Week 2 (Phase 3 & 4 — System Design & Development, Part 1)**
+- **Phase 3 — System Design:**
+  - Architecture decision: React frontend; API layer; MySQL (application data) + SQL Server (reporting/ analytics) per the team plan.
+  - API design: e.g. POST /reports; GET /reports/:id; PATCH /reports/:id/status; GET /reports?priority=... (Lesiamo + Crystal).
+  - Database/ ERD: users; reports; potholes; status history; photographs; priority scores.
+  - UI/UX design: report form, status tracker, staff dashboard, backlog map (Leaflet/ OpenStreetMap) (Raymond; Crystal + Raymond for dashboard/ map).
+  - Wireframes for resident-facing intake + status view and for the operational/ accountability views.
+- **Phase 4 — Development (Part 1):**
+  - Build the core intake + reference-number generation + report record (FR-01/ FR-02/ FR-03).
+  - Start status lifecycle + status-history storage (FR-04/ FR-10/ NFR-07).
+  - Begin the staff dashboard + backlog map skeleton (FR-07/ FR-08/ FR-09).
 
-### 12.3 Dependencies
-- Interview scheduling and execution (pending).
-- Access to at least one operational entry point (roads team/ ward/ community structure) to pilot work-item management and evidence capture.
-- Clarity on whether the website "Log a Service Fault" form issues reference numbers (verification needed).
-- Verification of the "pothole still there that killed 4 people" claim before any use as established fact.
+**Week 3 (Phase 5 & 6 — Development (Part 2) & Testing)**
+- **Phase 5 — Development (Part 2):**
+  - Finish duplicate matching (geo-distance + time window) (FR-06).
+  - Finish priority classification (road type/ traffic volume/ pothole size) as a **proposed academic model**, not an official municipal formula (FR-05).
+  - Finish notifications (FR-11) and repair-evidence/ record-repair (FR-12).
+  - Finish resident-facing status view (FR-06) and accountability-view skeleton (FR-08).
+- **Phase 6 — Testing:**
+  - Technical functionality; usability (can a driver submit and track a report?); duplicate matching; priority classification; API behaviour; dashboard behaviour.
+  - Run the **manual vs automated triage experiment** (same sample reports, Method A manual vs Method B system classification) — demonstrates the prototype's prioritisation logic, not a claim about real Emfuleni operations.
+  - Document testing limits explicitly: we cannot fully validate "this is exactly how Emfuleni staff would use it" without municipal staff access.
+  - Capture success indicators: reporting completeness (% reports with location + photo); duplicate reduction; triage consistency; tracking visibility (% submitted reports with current status); response information (time between statuses in prototype); usability.
+
+**Week 4 (Phase 7 — Deployment & Documentation)**
+- **Phase 6 (cont.) / Phase 6 handed over:** final fixes; deployment of the prototype/ handover artefacts.
+- **Phase 7 — Documentation & Dissertation:** write up research, methodology, results, limitations, and the findings from Section 20 (interviews + survey + positioning doc).
+- Compile final documentation: Lesiamo compiles final documentation; all members review.
+- **Submission:** due **29 October**.
+
+### 12.3 Dependencies & constraints (updated)
+- **Timeframe:** 4 weeks, due 29 October. Sequence is fixed: Week 1 = Phase 1 & 2; Week 2 = Phase 3 & 4; Week 3 = Phase 5 & 6; Week 4 = Phase 7.
+- **Already-done primary research:** 11 driver interviews (10/07/2026) + survey instrument + Crystal Charles positioning doc exist; these reduce Week 1 risk but must still be formally folded into the requirements baseline (Section 20 now does this).
+- **No municipal staff access:** remains a named limitation; the project does not claim to validate real Emfuleni operational use. Pilot/ prototype is decision-support + management, not a claim that it fixes roads or replaces the municipality.
+- **Verified-vs-unverified claims:** the "pothole still there that killed 4 people" claim remains unverified (R-05); the reference-number behaviour of the Emfuleni "Log a Service Fault" form remains an open question (R-03).
+- **Existing initiative awareness:** Operation Vala Zonke (launched 2022, launch on the R57 in Emfuleni) exists; the project positions itself as workflow/ information management, not "first reporting system."
+
+### 12.4 Roles summary (final)
+
+| Member | Primary responsibilities |
+|---|---|
+| **Lesiamo Mokone (Lead)** | Coordinates meetings, liaises with Miss Lee, manages submission deadlines. Architecture + API design, back-end development, database design (MySQL + SQL Server), duplicate matching, migrations, deployment, deployment guide, final documentation compilation. |
+| **Crystal Charles** | Requirements gatherer and documenter. Requirements analysis, priority classifier, staff dashboard, API development, testing. |
+| **Kgosi Itholeng** | Driver interviews (primary data), transcription, wireframes, front-end support, notifications, usability testing, user guide. |
+| **Raymond Tilstone** | UI/UX design, front-end development (report form, status tracker), persona visual design, usability testing, dissertation review. |
+
+**Role-to-feature mapping (for traceability):**
+- Intake + reference number + report record + API (POST /reports, GET /reports/:id, PATCH /reports/:id/status) → Lesiamo (architecture/ API/ DB) + Crystal (requirements/ API).
+- Duplicate matching + priority classifier → Lesiamo (duplicate matching) + Crystal (priority classifier/ requirements).
+- Staff dashboard + backlog map (Leaflet/ OSM) → Crystal + Raymond (dashboard/ map); Lesiamo (architecture).
+- Report form + status tracker (front-end) → Raymond (UI/UX + front-end); Kgosi (wireframes/ front-end support).
+- Notifications + repair-evidence → Crystal (requirements) + Kgosi (notifications/ front-end support).
+- Driver interviews + transcription + usability testing + user guide → Kgosi.
+- Persona visual design + usability testing + dissertation review → Raymond.
+- Final documentation compilation → Lesiamo; all members review.
+
+**Decision/ coordination rule:** Lesiamo coordinates meetings and the Miss Lee liaison and owns the submission deadline (29 October); week-by-week phase gates are owned jointly, with the lead confirming each gate is met before the next begins.
 
 ---
 
@@ -512,35 +562,77 @@ The ERPA-group claim "Pothole still there that killed 4 people" is **not verifie
 
 ---
 
-## 16. Phase 1 Deliverable — Live Task Board (Draft v1 structure)
+## 16. Live Task Board (active — mapped to the 7 SDLC phases, 4-week plan)
 
-Suggested columns (to be made live in the team's chosen tool):
+Columns (to be made live in the team's chosen tool):
 
 - **Backlog** — all items below, plus future phase-2 options.
-- **This week** — Week 1–2 items.
+- **This week** — items for the current week.
 - **In progress** — actively being worked.
 - **Blocked** — waiting on interviews, entry-point access, verification, etc.
 - **Done** — completed and evidenced.
 
-### Suggested backlog items (v1)
+### Week 1 (Phase 1 & 2 — Planning & Requirements Analysis) — items
 
-1. Finalise and sign team charter (Section 11).
-2. Publish this document as the requirements baseline.
-3. Confirm/ book interview slots (resident/ driver/ ward/ roads-team).
-4. Conduct interviews using Section 15 question set; capture findings.
-5. Verify whether the website "Log a Service Fault" form issues reference numbers (or build reference-number generation into the system).
-6. Verify the "pothole still there that killed 4 people" claim (RAF/ police/ media/ coroner) — or formally flag it as unverified.
-7. Refine urgent-pothole definition (Section 14) with stakeholder input where possible.
-8. Build intake + reference number + status view (prototype, then pilot).
-9. Build work-item management (priority/ owner/ target action/ target date/ status/ evidence).
-10. Build operational view (open/ dispatched/ completed/ pending by area/ crew/ priority).
-11. Build accountability view (throughput, closure rate, turnaround, area coverage, evidence) + operationalise SDBIP-relevant indicators.
-12. Configure prioritisation rules (draft; refine with Thabo/ ward input).
-13. Low-bandwidth/ mobile-first crew capture.
-14. Set up pilot boundary (one programme/ area/ ward, 6–12 weeks) and success measures.
-15. Run pilot; track success measures; produce periodic operational/ accountability updates.
-16. Document lessons learned + phase-2 options (scale; frequent-road-user condition baseline; PAIA support).
-17. Maintain channel inventory (Section 9) and desk research notes as living sections.
+1. Consolidate research + requirements (this document — done: Day 1 baseline + Day 2 addendum).
+2. Finalise and sign team charter (Section 11).
+3. Finalise risk register v1 (Section 13).
+4. Finalise urgent-pothole definition v1 (Section 14).
+5. Finalise interview question set (Section 15).
+6. Fold interview findings (11 respondents, 10/07/2026) + survey + Crystal Charles positioning doc into the requirements baseline (Section 20 — done).
+7. Confirm whether the 11 completed interviews satisfy the brief or whether a fresh/ additional wave is required.
+8. Set up the live task board (this section) mapped to the 7 phases.
+9. Lock the 4-week/ 29-October plan and roles (Section 12).
+
+### Week 2 (Phase 3 & 4 — System Design & Development, Part 1) — items
+
+10. Finalise architecture: React + API + MySQL (app data) + SQL Server (reporting/ analytics) (Lesiamo).
+11. Finalise API design: POST /reports; GET /reports/:id; PATCH /reports/:id/status; GET /reports?priority=... (Lesiamo + Crystal).
+12. Finalise ERD/ database design: users; reports; potholes; status history; photographs; priority scores (Lesiamo).
+13. Finalise UI/UX: report form, status tracker, staff dashboard, backlog map (Leaflet/ OpenStreetMap) (Raymond; Crystal + Raymond for dashboard/ map).
+14. Produce wireframes for resident-facing intake + status view and for operational/ accountability views (Kgosi; Raymond).
+15. Build intake + reference-number generation + report record (FR-01/ FR-02/ FR-03) (Lesiamo + Crystal).
+16. Start status lifecycle + status-history storage (FR-04/ FR-10/ NFR-07) (Lesiamo + Crystal).
+17. Start staff dashboard + backlog map skeleton (FR-07/ FR-08/ FR-09) (Crystal + Raymond).
+
+### Week 3 (Phase 5 & 6 — Development (Part 2) & Testing) — items
+
+18. Finish duplicate matching (geo-distance + time window) (FR-06) (Lesiamo).
+19. Finish priority classification (road type/ traffic volume/ pothole size) as a proposed academic model, not an official municipal formula (FR-05) (Crystal).
+20. Finish notifications (FR-11) and repair-evidence/ record-repair (FR-12) (Crystal + Kgosi).
+21. Finish resident-facing status view (FR-06) and accountability-view skeleton (FR-08) (Raymond; Crystal).
+22. Testing: functionality; usability; duplicate matching; priority classification; API behaviour; dashboard behaviour (Crystal + Kgosi + Raymond).
+23. Run the manual vs automated triage experiment (same sample reports, Method A manual vs Method B system classification); compare rankings, consistency, time (Crystal).
+24. Document testing limits explicitly: cannot fully validate real Emfuleni operational use without municipal staff access.
+25. Capture success indicators: reporting completeness; duplicate reduction; triage consistency; tracking visibility; response information; usability.
+
+### Week 4 (Phase 7 — Deployment & Documentation) — items
+
+26. Final fixes; deploy prototype/ handover artefacts; deployment guide (Lesiamo).
+27. Write up research, methodology, results, limitations (all members; Lesiamo compiles).
+28. Include findings from Section 20 (interviews + survey + positioning doc) in the dissertation/ write-up.
+29. Carry forward the limitation set (Section 20.7) into the final write-up.
+30. Submission due **29 October**.
+
+### Phase-2 options (backlog, not committed)
+
+31. Integration with official municipal systems.
+32. More sophisticated road-condition classification.
+33. Automatic image analysis.
+34. Contractor/ work-order integration.
+35. Advanced analytics; historical pothole trends; maintenance-planning integration.
+36. Offline functionality; multilingual support; stronger verification mechanisms.
+37. Integration with existing pothole-reporting initiatives.
+38. Optional frequent-road-user condition baseline (Lerato-type route data).
+39. PAIA template queries.
+
+### Ownership legend
+- **L** = Lesiamo Mokone (Lead)
+- **C** = Crystal Charles
+- **K** = Kgosi Itholeng
+- **R** = Raymond Tilstone
+
+(Where an item is joint, list both initials; the lead (L) confirms each phase gate before the next begins.)
 
 ---
 
@@ -583,14 +675,14 @@ This document covers Phases 1 & 2 (Planning & Requirements Analysis). The follow
 
 ---
 
-## 19. Next Steps (for tomorrow's continuation)
+## 19. Next Steps (updated for the 4-week plan, due 29 October)
 
-1. **Convert this document to Word** (Markdown → Word, per your plan).
-2. **Confirm team charter sign-off** and the pilot boundary/ entry-point partner.
-3. **Book interview slots** and conduct the Section 15 interviews; add findings to the document.
-4. **Verify the two open questions** (reference-number behaviour; "4 deaths" claim) — or formally record them as unverified.
-5. **Decide the first pilot entry point** (roads team, ward councillor, community structure, or a provincial PotholeFixGP comparison) given the documented municipal silence.
-6. **Set up the live task board** and begin the Week 1 items.
+1. **Confirm the Week 1 gate** is met: charter signed; risk register v1; urgent-pothole definition v1; interview question set; desk research notes; channel inventory; this document as the requirements baseline (Section 12.2 Week 1 items — most done).
+2. **Confirm the interview status decision:** are the 11 completed interviews (10/07/2026) + survey + Crystal Charles doc sufficient, or does the brief require a fresh/ additional wave? Decide and record it; if additional, schedule now.
+3. **Start Week 2 (Phase 3 & 4)** with the architecture/ API/ DB/ UI- UX decisions owned as mapped in Section 12.4.
+4. **Convert this document to Word** (Markdown → Word) for the submission/ working package.
+5. **Keep the two open verification questions flagged** (reference-number behaviour of the Emfuleni "Log a Service Fault" form — R-03; the "4 deaths" claim — R-05), and carry the limitation set (Section 20.7) into the final write-up.
+6. **Protect scope:** five core features (reporting, duplicate matching, priority classification, dashboard, notifications) + repair-evidence/ status-tracking extension; no province-wide road AI, no full condition surveying, no budget/ procurement — per Section 3 and the risk register.
 
 ---
 
