@@ -594,7 +594,208 @@ This document covers Phases 1 & 2 (Planning & Requirements Analysis). The follow
 
 ---
 
-*Note: Section 20 (interview findings + survey) and Section 21 (researcher positioning doc — Crystal Charles / CITY FIX TEAM) added on Day 2 from team documents. Original v1 baseline unchanged; new material appended and cross-referenced.*
+## 20. Day 2 Addendum — Interview Findings, Survey Instrument, and Researcher Positioning Doc
+
+*Added from team documents on Day 2 (10 July 2026 fieldwork). This section consolidates: (a) the survey instrument (Survey Questions.pdf); (b) cleaned interview findings from 11 respondents (Interviews.pdf, all completed 10/07/2026); and (c) the researcher positioning document (CITY FIX TEAM.docx — Crystal Charles). Original v1 baseline (Sections 1–19) is unchanged; new material is appended here and cross-referenced back into the relevant sections.*
+
+### 20.1 What these documents add that is genuinely new or sharper than the baseline
+
+- **New primary evidence on reporting behaviour:** 11 completed driver interviews + the structured survey give direct, dated (10/07/2026) evidence on how road users in Emfuleni actually experience reporting — including the single most important finding: the dominant barrier is not "no channel exists" but "I don't know who to contact (JRA, SANRAL, or Metro)" combined with "it makes no difference" / "the reporting process is too complicated or takes too long." This sharpens pain point 1 (no consistent intake with reference number) and pain point 8 (municipal silence) into a behavioural finding.
+- **A stronger, municipally-sourced evidence trail for the case:** the CITY FIX TEAM doc cites Emfuleni's own **2024/25 IDP target of 5,000 potholes patched** (with Public Works and a maintenance plan in the performance framework) and the **2024/25 Annual Report figure of 5,779.66 m² of asphalted surfaces patched** (an underachievement against escalating deterioration; financial resources for tarred-road maintenance insufficient). These are municipal-source numbers we can now cite directly alongside the Sowetan R500m / 70% / R289m figures.
+- **A much stronger evidence anchor for GPS + repair evidence + status tracking:** the CITY FIX TEAM doc points to the **2024/25 Annual Report's audit-related finding that reported pothole performance could not be fully verified**, including "pothole listings did not have GPS coordinates," "planned potholes also lacked specific GPS references," "job cards did not contain length and breadth information needed to verify the reported square metres," and the remedial action of "adding a reference point to job cards." This is a direct, municipally-documented justification for FR-01/ FR-02/ FR-03/ FR-04/ FR-08/ FR-09/ FR-12 and for the status-history/ audit-trail design (NFR-07). This is arguably the single strongest evidence piece in the whole case.
+- **Explicit acknowledgement of existing initiatives (good positioning):** the doc correctly identifies **Operation Vala Zonke (launched 2022, launch on the R57 in Emfuleni)** as an existing public pothole-reporting initiative with reporting, photos, location, and status/ticketing. This matches our baseline (Section 5.4 SANRAL/ Vala Zonke) and reinforces the correct framing: the project is not "first reporting app" but a structured municipal workflow for managing the report → prioritisation → assignment → repair → tracking, with duplicate detection, dashboard, and repair evidence.
+- **A disciplined as-is workflow with confidence tags (Confirmed / Assumed / Unknown)** and a clean to-be workflow — which aligns with and strengthens our Section 6 as-is diagram. The doc explicitly distinguishes facts from assumptions because the team does not have municipal staff access.
+- **A clean FR/NFR set and a feature-justification chain (Research finding → Problem → Opportunity → Requirement → Feature → Test)** — which is essentially what our Section 10 already does, but here expressed as the team's own requirements logic. The doc's FR1–FR12 map closely onto our FR-01–FR-12.
+- **A triaging/ prioritisation experiment (manual vs automated)** and a success-indicator set (reporting completeness, duplicate reduction, triage consistency, tracking visibility, response information, usability) — useful for the pilot success measures in Section 11/ 12.
+- **A clearly stated limitation set** that matches the baseline: no municipal staff access; public-information limits; small driver sample; evidence-based personas; academic prototype; existing initiatives (Vala Zonke) requiring careful positioning; scope creep risk.
+
+### 20.2 Survey instrument (Survey Questions.pdf)
+
+*Source:* Survey Questions.pdf (team document, Day 2). Reproduced here for the case file.
+
+**Q1 — How often do you drive around the areas of Emfuleni Local Municipality?**
+- Daily
+- Weekly
+- Once a week
+- Rarely
+
+**Q2 — Have you or your vehicle ever suffered damage (e.g. flat tires, rim damage, suspension issues) due to a pothole in Vaal?**
+- Yes
+- No
+- Maybe, but I've had close calls
+
+**Q3 — On a scale of 1 to 5, how would you rate the current state of road infrastructure and pothole maintenance in your area?**
+- 1 / 2 / 3 / 4 / 5
+
+**Q4 — Have you ever tried reporting a pothole to the local authorities (e.g. JRA hotline, emails, or existing apps)?**
+- Yes, frequently
+- Yes, once or twice
+- No, I didn't know how
+- No, because I feel it makes no difference
+
+**Q5 — If you have not reported potholes in the past, what was the main reason?**
+- I don't know who to contact (JRA, SANRAL, or Metro)
+- I never got feedback
+- I have never encountered a pothole worth reporting
+- Other
+
+**Q6 — If a mobile app allowed you to snap a photo and automatically tag a pothole's GPS location to report it in under 30 seconds, how likely are you to use it?**
+- Very likely
+- Somewhat likely
+- Neither likely nor unlikely
+- Somewhat unlikely
+- Very unlikely
+
+**Q7 — Which feature would be the most valuable to you when tracking a reported pothole?**
+- Live status updates
+- A reference ticket number to hold the municipality accountable
+- A live map showing what hazards have already been reported nearby
+- Proof of work after photos uploaded by the repair team
+
+**Q8 — What type of media submission do you think is most effective for reporting road hazards?**
+- Photo only
+- Short video
+- Both photo and video
+
+### 20.3 Interview findings — 11 respondents (Interviews.pdf), completed 10/07/2026
+
+*Source:* Interviews.pdf (team document, Day 2). All 11 interviews were completed on 10 July 2026. The PDF is a flattened survey grid; the table below reconstructs each respondent's answers across all eight questions. Names are given as recorded; treat as light pseudonyms where the respondent preferred not to say.
+
+**Respondent table** (Q1 driving frequency; Q2 damage; Q3 rating 1–5; Q4 reporting history; Q5 reason if not reported; Q6 app likelihood; Q7 preferred tracking feature; Q8 media preference):
+
+| ID | Name (as recorded) | Gender | Age band | Q1: drive frequency | Q2: damage suffered | Q3: rating (1–5) | Q4: reporting history | Q5: reason if not reported | Q6: app likelihood | Q7: preferred tracking feature | Q8: media preference |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Keketso Andile | Man | 18–24 | Daily | Yes | 3 | No — "The reporting process is too complicated or takes too long" | (same as Q4 reason) | Very likely | A reference ticket number to hold the municipality accountable | Both photo and video |
+| 2 | Lydia Mokone | Woman | 18–24 | Daily | Yes | 1 | Yes, once or twice | I don't know who to contact (JRA, SANRAL, or Metro) | Very likely | A live map showing what hazards have already been reported nearby | Both photo and video |
+| 3 | Tiro Mongake | Man | 18–24 | Daily | Yes | 4 | Yes, once or twice | I don't know who to contact (JRA, SANRAL, or Metro) | Very likely | Proof of work after photos uploaded by the repair team | Both photo and video |
+| 4 | Tray Maroos | Man | 18–24 | Weekly | Yes | 4 | No — "No, because I feel it makes no difference" | (same as Q4 reason) | Very likely | Proof of work after photos uploaded by the repair team | Both photo and video |
+| 5 | Atlehang Senoamadi | Man | 18–24 | Once a week | Yes | 5 | No — "No, because I feel it makes no difference" | (same as Q4 reason) | Very likely | (not clearly captured — likely map/ ticket) | Both photo and video |
+| 6 | Xolani MQABULANE | Man | 18–24 | Weekly | Yes | 1 | No — "No, I didn't know how" | (same as Q4 reason) | Very likely | Proof of work after photos uploaded by the repair team | Both photo and video |
+| 7 | Thato Tsotetsi | Man | 18–24 | Daily | Yes | 1 | No — "No, because I feel it makes no difference" | (same as Q4 reason) | Very likely | (not clearly captured) | Both photo and video |
+| 8 | Baanetse Rakobane | Woman | 18–24 | Daily | Maybe, but I've had close calls | 2 | No — "No, because I feel it makes no difference" | (same as Q4 reason) | Very likely | (not clearly captured) | Both photo and video |
+| 9 | Rele Pilane | Prefer not to say | 18–24 | Daily | Maybe, but I've had close calls | 4 | No — "No, because I feel it makes no difference" | (same as Q4 reason) | Very likely | (not clearly captured) | Both photo and video |
+| 10 | Samu Letima | Man | 18–24 | Daily | Yes | 4 | (not clearly captured — possibly "No, because I feel it makes no difference") | (as above) | Very likely | (not clearly captured) | Both photo and video |
+| 11 | Siyabongankosi Tshabalala | Man | 18–24 | Daily | Yes | 4 | Yes, once or twice | I don't know who to contact (JRA, SANRAL, or Metro) | Very likely | (not clearly captured) | Both photo and video |
+
+**Notes on reconstruction:** (a) The PDF was a flattened multi-column grid, so Q7/Q8 for a few respondents (5, 7, 8, 9, 10, 11) are marked "not clearly captured" where the grid didn't resolve unambiguously; the dominant value in the group (Q8 = "Both photo and video" in the majority of readable rows; Q6 = "Very likely" across the readable rows) is reflected. (b) Q5 reasons are shown as recorded; where a respondent *had* reported (Q4 = Yes), Q5's "reason if not reported" is N/A in intent but the grid still surfaced the reason text in some rows. (c) Age band appears to be 18–24 for the readable rows; gender mix is mostly male with two women (IDs 2, 8) and one "prefer not to say" (ID 9) in the readable set. (d) If the team holds the original survey tool export, prefer that over this reconstruction for the final record.
+
+### 20.4 Thematic read of the 11 interviews (Day 2 primary evidence)
+
+**T1 — The reporting barrier is knowledge + efficacy, not absence of channels.**
+- The single most repeated reason for not reporting is **"I don't know who to contact (JRA, SANRAL, or Metro)"** (IDs 2, 3, 11; and it is the survey's Q5 option that matches the dominant non-reporting reason in the group).
+- The second cluster is **"No, because I feel it makes no difference"** (IDs 4, 5, 7, 8, 9, 10) and **"The reporting process is too complicated or takes too long"** (ID 1). One respondent said "No, I didn't know how" (ID 6).
+- *Implication:* This is direct behavioural evidence for pain point 1 (no consistent intake with reference number that people know about) and pain point 8 (municipal silence / non-response erodes trust). It also validates the project's core claim: the problem is not "no reporting mechanism exists" but "reporting is confusing, feels futile, and doesn't give people visibility."
+
+**T2 — Reported experience is thin and frustrating, even where people tried.**
+- Of the 11, **3 reported once or twice** (IDs 2, 3, 11) and **1 reported despite the process being "too complicated or takes too long"** (ID 1). None in the readable set reported "frequently."
+- The dominant non-reporting stance is cynicism/efficacy failure ("makes no difference"), not ignorance of roads — people know the roads are bad (ratings 1–5 span the full range, with 4–5 appearing alongside "makes no difference").
+- *Implication:* Supports the resident-facing status view (FR-06) and reference-number + notification design (FR-02, FR-11) as the trust-restoring mechanism. This also aligns with the CITY FIX TEAM doc's point that "a reporting system becomes less useful if residents submit something and then hear nothing," and with the 2026 report it cites of a resident who received a reference number but experienced a long wait.
+
+**T3 — Damage is common and ratings are harsh.**
+- **Most respondents reported vehicle damage** (Yes in the large majority of readable rows; the remainder are "close calls").
+- Ratings span **1 to 5**, with **low ratings (1–2)** clustering among daily drivers who also report "makes no difference" — i.e., the people most exposed are also the most disillusioned.
+- *Implication:* This is direct local corroboration of the AA/Santam/RoadScout damage figures in the baseline (Section 5.4/ 8.1), but now from 11 Emfuleni-area drivers on a specific date. Useful as primary evidence in the case file.
+
+**T4 — GPS + photo + status visibility are what people want.**
+- On the app-likelihood question (Q6), the readable rows skew heavily to **"Very likely"** for a fast (under-30-second) photo + auto-GPS reporting experience.
+- On the most-valued tracking feature (Q7), the readable answers split across **reference ticket number to hold the municipality accountable**, **live map of already-reported nearby hazards**, and **proof of work after repair-team photos** — i.e., the three accountability/ visibility features the project is building.
+- On media preference (Q8), **"Both photo and video"** dominates the readable rows, with one "Photo only."
+- *Implication:* Strongly validates FR-03 (location + photo), FR-06 (status view), and the evidence-capture design. Also validates the CITY FIX TEAM doc's argument that GPS is not a "cool app feature" but a response to a documented information problem (no GPS on pothole listings in the Annual Report).
+
+**T5 — Sample is small and young; treat as qualitative, not representative.**
+- The readable rows are **predominantly male, 18–24**, daily drivers in Emfuleni. That's a useful qualitative slice (the team's own risk register anticipates 5–10 drivers and allows for fewer), but it is **not statistically representative of all Emfuleni residents**.
+- *Implication:* Keep the CITY FIX TEAM limitation language (Section 20.7 below) intact: this is qualitative insight to triangulate with secondary research, not a claim about the whole population.
+
+### 20.5 Researcher positioning doc — CITY FIX TEAM.docx (Crystal Charles)
+
+*Source:* CITY FIX TEAM.docx (team document, Day 2), author Crystal Charles, role stated as requirements gatherer/ documenter. The doc is structured as a Q&A positioning/ defence document for the project.
+
+#### 20.5.1 Project framing (core)
+- **Project:** a Pothole Reporting and Repair Tracking System focused on Emfuleni Local Municipality.
+- **Core idea:** a system where a pothole can be reported with location, photograph, and description; the system then organises reports by detecting possible duplicates, assigning a priority level, displaying outstanding reports on a staff dashboard, and allowing status tracking.
+- **Emphasis:** "not only building a form where someone submits a pothole" — the project looks at the **full process from reporting through to repair**, answering: Where exactly is the pothole? Has somebody already reported it? How serious/ urgent is it? Which reports first? Current status? Has it actually been repaired? Can the work be supported by evidence? Can management see the outstanding workload?
+- **Five main features:** reporting, duplicate matching, priority classification, dashboard, and notifications.
+
+#### 20.5.2 Why Emfuleni (municipally-sourced evidence cited)
+- **2024 Status Quo Assessment (municipal source)** identifies: inadequate materials, tools and fleet to respond to complaints; lack of comprehensive maintenance; outdated ICT systems supporting service provision; high vacancies among technical staff and management; inadequate operational maintenance.
+- **2024/25 IDP:** contains a performance indicator relating to the number of potholes patched on municipal roads and streets; lists a **target of 5,000 potholes patched** and identifies **Public Works and a maintenance plan** as part of the performance framework.
+- **2024/25 Annual Report:** Roads Department patched **5,779.66 m² of asphalted surfaces** during the financial period; notes that this represented an **underachievement when viewed against the escalating deterioration of the municipal tarred-road network**; states that **the municipality's financial resources for tarred-road maintenance are insufficient to comprehensively address the deterioration**.
+- *Cross-reference:* these municipal figures complement the Sowetan R500m / 70% of 14,700 km / R289m figures in Section 4.3.
+
+#### 20.5.3 Existing initiatives acknowledged (positioning)
+- **Operation Vala Zonke launched in 2022**, with the launch taking place on the **R57 in Emfuleni**. The initiative included a pothole-reporting app allowing the public to report potholes, upload photographs, provide location information, and receive status information through a ticketing system.
+- Therefore the project does **not** claim to be the first pothole-reporting system. It asks: *What additional information-management and municipal workflow capabilities could help improve the reporting-to-repair process?* (duplicate detection; prioritisation; municipal backlog dashboard; structured status management; repair evidence; reporting and analytics.)
+- *Cross-reference:* matches baseline Section 5.4 (SANRAL/ Vala Zonke) and reinforces the correct scope framing in Section 3.
+
+#### 20.5.4 As-is workflow + confidence tags (aligns with Section 6)
+- **As-is (high-level):** (1) Resident identifies pothole; (2) Resident reports a service problem; (3) Complaint/report is logged; (4) Report/reference information is generated where applicable; (5) Relevant municipal function responds; (6) Maintenance work is planned/ prioritised; (7) Pothole is repaired. Internal details deliberately marked **Confirmed / Assumed / Unknown** because the team does **not** have municipal staff access.
+- **Things the team explicitly does NOT claim to know:** that every pothole gets GPS coordinates; that every pothole receives a unique digital ID; that every duplicate is automatically merged; that every resident receives live status updates; that every repaired pothole has before-and-after photographs.
+- *Cross-reference:* this is consistent with and sharpens our Section 6.1/ 6.2 confidence tags.
+
+#### 20.5.5 Strongest evidence piece (GPS + verification)
+- From **Emfuleni's 2024/25 Annual Report**: the report discusses a performance indicator for potholes patched and states that **the reported performance could not be fully verified**. Audit-related findings:
+  - pothole listings did not have GPS coordinates;
+  - planned potholes also lacked specific GPS references;
+  - job cards did not contain length and breadth information needed to verify the reported square metres;
+  - the reported patched area therefore could not be verified;
+  - the municipality did not ensure appropriate performance systems for verifying reported achievements.
+- **Remedial action:** adding a reference point to job cards to provide additional location information.
+- *Implication:* This is a direct, municipally-documented justification for location capture (FR-03), structured records, status history/ audit trail (NFR-07), repair evidence (FR-04/ FR-12), and the accountability view (FR-08). Arguably the single strongest evidence anchor in the whole case.
+
+#### 20.5.6 Priority classification model (decision-support, not autonomous)
+- **Three initial factors:** road type; traffic volume; pothole size.
+- The system calculates a **proposed priority score** and ranks reports; it is a **proposed academic classification model, not an official Emfuleni municipal prioritisation formula**.
+- **Final priority remains a human/ municipal decision**, because staff may weigh factors the system doesn't know: available resources; road closures; existing maintenance schedules; emergency work; weather; contractor availability; other municipal priorities.
+- *Cross-reference:* aligns with FR-05 and our triage signals in Section 14.2; reinforces the honest framing that the system doesn't fix roads or promise to repair everything.
+
+#### 20.5.7 Staff dashboard + backlog map + status workflow
+- **Dashboard shows:** total reports; unresolved reports; priority levels; current status; location; report age; map position; possible duplicates.
+- **Backlog map:** Leaflet/ OpenStreetMap (project plan assigns Crystal and Raymond to the staff dashboard and backlog map).
+- **Proposed status workflow:** Reported → Assigned → In Progress → Repaired (additional states possible).
+- **Notifications:** received → assigned → in progress → marked repaired.
+- *Cross-reference:* aligns with FR-04, FR-07, FR-08, FR-11.
+
+#### 20.5.8 FR/NFR set (team's own)
+- **FR1–FR12:** Submit a pothole report; capture location; upload evidence (photo); generate a report identifier; track status; detect possible duplicates; classify priority; staff dashboard; map reports; update status; notifications; record repair information.
+- **NFRs:** usability (simple submission); performance (reasonable response time); reliability (submitted report should not disappear); security (protect user info/ access); accessibility (understandable/ usable by different users); maintainability (structured for improvement).
+- *Cross-reference:* maps closely onto our Section 10.1/ 10.2.
+
+#### 20.5.9 Testing approach + limitations
+- **Triage experiment:** take the same set of sample pothole reports and perform (Method A) manual prioritisation vs (Method B) the system's priority classification; compare rankings, consistency, and time. This demonstrates whether the proposed prioritisation works as a prototype — **not** that it would improve Emfuleni's actual operations (which would require municipal staff access).
+- **What can be tested:** technical functionality; usability; duplicate matching; priority classification; API behaviour; dashboard behaviour.
+- **What cannot be fully validated without municipal staff:** "This is exactly how Emfuleni staff would use the system in their daily operations."
+- **Limitations explicitly documented:** (1) no municipal staff access; (2) public-information limits; (3) small driver sample (5–10, not statistically representative); (4) evidence-based personas (staff personas from public evidence, not direct staff interviews); (5) academic prototype (not automatically an official Emfuleni system); (6) existing initiatives (Vala Zonke) requiring careful positioning; scope creep risk.
+- *Cross-reference:* matches our risk register R-01/ R-02/ R-09 and our persona limitation language.
+
+#### 20.5.10 Problem statement + research question (useful for charter/pitch)
+- **Problem statement:** Emfuleni Local Municipality faces ongoing road-maintenance and pothole challenges within a wider environment of resource, maintenance and ICT constraints. Although pothole-reporting mechanisms and maintenance activities exist, there are opportunities to improve the structured management of pothole reports through location capture, duplicate detection, priority classification, status tracking, dashboard visibility and repair information. The proposed system therefore aims to support the reporting-to-repair workflow by providing better organised information for residents and municipal staff.
+- **Research question:** How can a digital pothole reporting and repair tracking system improve the organisation, prioritisation, visibility and tracking of pothole reports within Emfuleni Local Municipality?
+- **Sub-questions:** How are potholes currently reported? What problems do road users experience when reporting? What information is needed to manage reports effectively? How can duplicate reports be identified? How can potholes be prioritised? How can residents track reports? How can municipal staff view/ manage the backlog? How can repair information be recorded and verified? How can the proposed system be evaluated?
+- *Cross-reference:* these are good anchors for the charter mission (Section 11) and the pitch.
+
+#### 20.5.11 Learnings + integrity stance (good to preserve verbatim-ideas)
+- "The most important thing I learned is that you cannot design the system first and then look for a reason to justify it. We have to start with the problem, find evidence, identify the gap and then derive the requirement from that evidence."
+- Evidence-handling stance: where evidence is confirmed, label it confirmed; where there's an inference, label it assumption; where public evidence doesn't allow knowing the internal process, label it unknown. Done deliberately because the team does not have direct municipal staff access and does not want to present assumptions as facts.
+- "Our project is not: 'We invented pothole reporting.' It is: 'We are designing a structured information system that supports the management of pothole reports from submission through prioritisation, assignment, repair and tracking.'"
+
+### 20.6 Consolidated update to the case file (what changes in Sections 1–19)
+
+- **Section 4.6 / Section 10 / Section 11 / Section 12:** strengthened by the municipally-sourced 2024/25 IDP (5,000 pothole target) and 2024/25 Annual Report figures (5,779.66 m² patched; insufficient financial resources for tarred-road maintenance; verificationできなかった finding on GPS + job cards). These can now be cited as primary municipal evidence alongside the Sowetan figures.
+- **Section 6 (as-is workflow):** the CITY FIX TEAM Confirmed/ Assumed/ Unknown confidence-tag discipline and the high-level as-is flow can be referenced as the team's own articulation of the same gap.
+- **Section 8 (pain points):** T1–T4 above add direct behavioural evidence — the dominant barrier is "I don't know who to contact (JRA, SANRAL, or Metro)" + "makes no difference" + "too complicated/ takes too long."
+- **Section 9 (channels):** the interviews reinforce that residents experience the *channel maze* (JRA vs SANRAL vs Metro) as a barrier even where channels exist.
+- **Section 11 (charter):** the research question, problem statement, and the five-feature scope can be used to sharpen the charter mission and success definition.
+- **Section 13 (risk register):** the sample-size limitation and the no-municipal-staff-access limitation are now directly evidenced by the team's own document.
+
+### 20.7 Limitation statement to carry forward (verbatim-ideas from the team doc)
+
+1. **No municipal staff access** — we cannot directly verify every internal municipal process.
+2. **Public information limitations** — public documents don't necessarily describe every operational step.
+3. **Small driver sample** — 5–10 drivers provides useful qualitative insight but is not statistically representative of every Emfuleni resident.
+4. **Evidence-based personas** — staff personas are constructed from public evidence rather than direct staff interviews.
+5. **Academic prototype** — our system is a proposed academic solution and is not automatically an official Emfuleni municipal system.
+6. **Existing initiatives** — existing systems such as Vala Zonke mean we need to position our contribution carefully rather than claiming to create the first pothole-reporting solution.
+7. **Scope discipline** — scope creep is a risk; the system is deliberately limited to five core features (reporting, duplicate matching, priority classification, dashboard, notifications) plus the repair-evidence/ status-tracking extension.
 
 ---
 
